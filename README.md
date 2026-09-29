@@ -1,6 +1,6 @@
 # Self-Healing Microservices with Chaos Engineering
 
-> Status: 🚧 Phase 1 — Foundation & Architecture
+> Status: ✅ Phase 1 complete — 🚧 Phase 2 — Microservices + Docker
 
 ## Project Overview
 A Kubernetes-based microservices platform on Amazon EKS, engineered to
@@ -16,8 +16,8 @@ whether the platform meets that objective.
 See [docs/architecture/architecture.md](docs/architecture/architecture.md).
 
 ## Technology Stack
-Node.js/TypeScript · Docker · Kubernetes (Kind/EKS) · Terraform · Prometheus ·
-Grafana · Chaos Mesh · GitHub Actions · PostgreSQL
+Node.js/TypeScript · Docker · Kubernetes (Kind, local-only) · Jenkins ·
+Prometheus · Grafana · Chaos Mesh · PostgreSQL
 
 ## Key Features
 *(filled in later phases)*
