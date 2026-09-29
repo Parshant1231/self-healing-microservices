@@ -1,0 +1,28 @@
+# Node
+node_modules/
+dist/
+build/
+*.log
+npm-debug.log*
+.env
+.env.*
+!.env.example
+
+# Docker
+*.pid
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+!*.tfvars.example
+
+# Kubernetes
+kubeconfig
+*.kubeconfig
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
