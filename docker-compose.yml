@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  api-gateway:
+    build: ./services/api-gateway
+    ports:
+      - "4000:4000"
+    environment:
+      - USER_SERVICE_URL=http://user-service:4001
+      - ORDER_SERVICE_URL=http://order-service:4002
+    depends_on:
+      - user-service
+      - order-service
+
+  user-service:
+    build: ./services/user-service
+    ports:
+      - "4001:4001"
+
+  order-service:
+    build: ./services/order-service
+    ports:
+      - "4002:4002"
+    environment:
+      - USER_SERVICE_URL=http://user-service:4001
+    depends_on:
+      - user-service
