@@ -1,0 +1,12 @@
+# Values used to install kube-prometheus-stack via Helm.
+# Install with:
+#   helm install kube-prometheus prometheus-community/kube-prometheus-stack \
+#     --namespace observability --create-namespace -f observability/prometheus/values.yaml
+grafana:
+  adminPassword: admin123
+prometheus:
+  prometheusSpec:
+    resources:
+      requests:
+        cpu: 100m
+        memory: 256Mi
