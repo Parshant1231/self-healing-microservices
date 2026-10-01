@@ -1,0 +1,25 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: NetworkChaos
+metadata:
+  name: order-to-user-network-delay
+  namespace: self-healing
+spec:
+  action: delay
+  mode: all
+  selector:
+    namespaces:
+      - self-healing
+    labelSelectors:
+      app: order-service
+  delay:
+    latency: "2s"
+    jitter: "500ms"
+  duration: "60s"
+  direction: to
+  target:
+    mode: all
+    selector:
+      namespaces:
+        - self-healing
+      labelSelectors:
+        app: user-service
