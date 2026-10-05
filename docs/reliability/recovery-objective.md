@@ -21,10 +21,10 @@ configured in Phase 4's deployment manifests.
 1. Note timestamp when failure is injected (pod deleted).
 2. Note timestamp when a replacement Pod reaches `Running` + `READY 1/1`.
 3. Recovery time = (2) - (1).
-Manual timestamps for now (Phase 4); Phase 5 automates this via Prometheus
+Manual timestamps for now (Phase 4; Phase 5 automates this via Prometheus
 metrics and a Grafana panel.
 
 ## Results
 | Date | Method | Recovery Time | Result |
 |------|--------|---------------|--------|
-| NOT YET EXECUTED | | | |
+| 2026-10-05 | Chaos Mesh (pod-failure) | 29s | PASS |
